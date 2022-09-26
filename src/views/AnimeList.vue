@@ -1,10 +1,18 @@
 <template>
   <div>Hello my lord</div>
-  <anime-block v-for="anime in animes" :key="anime.mal_id" :anime="anime"></anime-block>
+  <div class="anime-list">
+    <anime-block v-for="anime in animes" :key="anime.mal_id" :anime="anime"></anime-block>
+  </div>
+  <div class="pagination">
+    <v-pagination v-model="currentPage" :pages="pages" :range-size="1" active-color="#DCEDFF"
+      @update:modelValue="updateHandler" />
+  </div>
 </template>
 <script>
 
 import AnimeBlock from "@/components/AnimeBlock.vue"
+import VPagination from "@hennge/vue3-pagination";
+import "@hennge/vue3-pagination/dist/vue3-pagination.css";
 
 export default {
   name: 'anime-list',
@@ -14,7 +22,8 @@ export default {
     }
   },
   components: {
-    AnimeBlock
+    AnimeBlock,
+    VPagination
   },
   computed: {
     animes() {

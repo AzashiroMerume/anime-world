@@ -1,7 +1,7 @@
 <template>
     <div class="anime-block">
         <div class="anime-block__image">
-            <img :src="anime.image" :alt="anime.title">
+            <img :src="anime.images.jpg.image_url" :alt="anime.title">
         </div>
         <div class="anime-block__info">
             <span @click="detailedInfo">

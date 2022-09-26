@@ -35,13 +35,12 @@ export default createStore({
       return axiosInstance
         .get(ANIMES_BY_PAGE(page))
         .then(({ data }) => {
-          console.log('Hello, World');
-          console.log(data.pagination);
+          const { pagination, data: animes} = data;
           commit("setAnimes", {
             page,
-            animes: data.data,
+            animes: animes,
           });
-          commit("setPages", data.pagination.last_visible_page);
+          commit("setPages", pagination.last_visible_page);
         })
         .catch((err) => console.log(err));
     },
