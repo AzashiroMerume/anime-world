@@ -6,31 +6,31 @@
 // }
 
 .anime-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .anime-block {
-    display: flex;
-    justify-content: row;
-    width: 22%;
-    margin: 10px;
+  display: flex;
+  justify-content: row;
+  width: 22%;
+  margin: 10px;
 
-    &__image img {
-        width: 160px;
-        height: auto;
-    }
-    &__info {
-        display: flex;
-        flex-direction: column;
-    }
+  &__image img {
+    width: 160px;
+    height: auto;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% auto;
 }

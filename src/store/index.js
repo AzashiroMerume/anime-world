@@ -35,7 +35,7 @@ export default createStore({
       return axiosInstance
         .get(ANIMES_BY_PAGE(page))
         .then(({ data }) => {
-          const { pagination, data: animes} = data;
+          const { pagination, data: animes } = data;
           commit("setAnimes", {
             page,
             animes: animes,
